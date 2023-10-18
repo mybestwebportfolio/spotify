@@ -137,7 +137,7 @@ const Header = () => {
                     <Button className="bg-transparent text-neutral-400 text-base hover:transition hover:scale-105 hover:text-white" onClick={authModal.onOpen}>
                         Sign up
                     </Button>
-                    <Button className="hover:transition hover:scale-105 py-3 px-10 font-bold" onClick={authModal.onOpen}>
+                    <Button className="hover:transition hover:scale-105 py-3 px-10 max-md:px-5 max-md:py-2 font-bold" onClick={authModal.onOpen}>
                         Log in
                     </Button>
                 </div>
