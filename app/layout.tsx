@@ -13,6 +13,8 @@ import getSongByUserId from '@/actions/getSongByUserId'
 
 const font = Figtree({ subsets: ['latin'] })
 
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: 'Spotify - Web Player: Music for everyone',
   description: 'open.spotify.com',
