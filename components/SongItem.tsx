@@ -10,6 +10,7 @@ import useAuthModal from "@/hooks/useAuthModal"
 import { useUser } from "@/hooks/useUser"
 
 import PlayButton from "./PlayButton"
+import PlayButtonSongItem from "./PlayButtonSongItem"
 
 interface SongItemProps {
     data: Song
@@ -41,7 +42,7 @@ const SongItem = ({data}: SongItemProps) => {
                 <p className="text-sm font-semibold text-neutral-400">{data.artist}</p>
             </div>
             <div className="absolute bottom-28 right-5">
-                <PlayButton />
+                <PlayButtonSongItem />
             </div>
         </div>
     )
