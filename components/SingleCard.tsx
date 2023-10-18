@@ -26,8 +26,8 @@ const SingleCard = ({song, title, className, playBtn, transparentBg}: SingleCard
             <Image src={imagePath || ""} alt="Song image" fill className="object-cover rounded-md"/>
           </div>
           <div className="flex flex-col justify-center items-start">
-              <h2 className="text-xs text-white">From the single</h2>
-              <h1 className="text-base text-white font-semibold">{title}</h1>
+              <h2 className="text-xs text-white max-md:truncate">From the single</h2>
+              <h1 className="text-base text-white font-semibold max-md:truncate">{title}</h1>
           </div>
         </div>
         {playBtn && (

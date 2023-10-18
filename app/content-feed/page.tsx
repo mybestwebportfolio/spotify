@@ -7,7 +7,7 @@ const Page = () => {
                 <h1 className="text-white text-4xl font-bold">{`What's New`}</h1>
                 <p className="text-xs text-neutral-400 font-semibold">The latest releases from artist, podcast, and shows you follow</p>
                 <div className="flex items-center gap-x-2 mt-4">
-                    <Link href="/search" className="bg-neutral-700/40 text-white text-base py-1 px-4 w-fit bg-white  font-semibold  cursor-pointer rounded-full disabled:cursor-not-allowed disabled:opacity-50">
+                    <Link href="/search" className="bg-neutral-700/40 text-white text-base py-1 px-4 w-fi  font-semibold  cursor-pointer rounded-full disabled:cursor-not-allowed disabled:opacity-50">
                         Music
                     </Link>
                 </div>

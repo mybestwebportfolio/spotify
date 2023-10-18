@@ -17,15 +17,24 @@ import { useUser } from "@/hooks/useUser"
 
 import { useSupabaseClient } from "@supabase/auth-helpers-react"
 import { useSessionContext } from "@supabase/auth-helpers-react"
+import useUploadModal from "@/hooks/useUploadModal"
 
 const Header = () => {
     const [dropDown, setDropDown] = useState(false)
     const authModal = useAuthModal()
+    const uploadModal = useUploadModal()
     const { user } = useUser()
     const router = useRouter()
 
     const supabaseClient = useSupabaseClient()
     const { session } = useSessionContext()
+
+    const handleUpload = () => {
+        if(!user){
+        return authModal.onOpen()
+        }
+        return uploadModal.onOpen()
+    }
 
     useEffect(() => {
         if(session){
@@ -61,13 +70,13 @@ const Header = () => {
             </div>
 
             <div className="flex items-center gap-x-3 md:hidden">
-                <button className="flex items-center justify-center bg-white p-2 rounded-full hover:transition hover:scale-105">
+                <button className="flex items-center justify-center bg-white p-2 rounded-full hover:transition hover:scale-105" onClick={() => router.push("/")}>
                     <AiFillHome size={22} className="text-neutral-900"/>
                 </button>
-                <button className="flex items-center justify-center bg-white p-2 rounded-full hover:transition hover:scale-105">
+                <button className="flex items-center justify-center bg-white p-2 rounded-full hover:transition hover:scale-105" onClick={() => router.push("/search")}>
                     <AiOutlineSearch size={22} className="text-neutral-900"/>
                 </button>   
-                <button className="flex items-center justify-center bg-white p-2 rounded-full hover:transition hover:scale-105">
+                <button className="flex items-center justify-center bg-white p-2 rounded-full hover:transition hover:scale-105" onClick={handleUpload}>
                     <AiOutlinePlus size={22} className="text-neutral-900"/>
                 </button>   
             </div>

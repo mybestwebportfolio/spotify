@@ -11,7 +11,7 @@ interface HeaderSongProps {
 const HeaderSong = ({firtsColor, secondColor, imagePath, song}: HeaderSongProps) => {
     const year = new Date(song.created_at).getFullYear()
     return (
-        <div className={`w-full h-80 relative`} style={{ backgroundImage: `linear-gradient(to bottom, ${firtsColor}, ${secondColor})` }}>
+        <div className={`w-full h-80 max-md:h-64 relative`} style={{ backgroundImage: `linear-gradient(to bottom, ${firtsColor}, ${secondColor})` }}>
             <div className="absolute bottom-7 left-7 flex gap-x-5">
                 <div className="w-52 max-md:w-36 aspect-square">
                     <Image src={imagePath || ""} alt="song image" fill className="object-cover rounded-md"/>
